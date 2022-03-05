@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner leitor = new Scanner(System.in);
+		
+		long cpf;
+		String nome;
+		int idade;
+		
+		
+		/*System.out.println("Digite o CPF:");
+		cpf= leitor.nextLong();
+		
+		System.out.println("Digite o Nome:");
+		nome= leitor.next();
+		
+		System.out.println("Digite sua idade:");
+		idade= leitor.nextInt();*/
+		
+		Cliente teste= new Cliente("nome",12333, 12);
+		System.out.println(teste.imprimirClientes());
+		
+	
+	}
+
+}

@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class Cliente {
+
+	  ArrayList<String> cadastro = new ArrayList();
+	  
+	protected String nome;
+
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public void adicionar (String nome, int cpf) {
+		cadastro.add(nome, cpf);
+	 
+	}
+	
+	public ArrayList ImprimirClientes() {return cadastro;}
+}

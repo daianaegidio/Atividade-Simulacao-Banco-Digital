@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.List;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		
+		Cliente venilton = new Cliente();
+		String dd="Daiana";
+		
+	venilton.teste(dd);
+	 dd="Mathues";
+	 venilton.teste(dd);
+	 System.out.println( venilton.teste(dd));
+	
+	}
+
+}

@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.util.List;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Cliente cliente=new Cliente();
+		Banco banco= new Banco(cliente);
+		banco.teste();
+	
+	}
+
+}

@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Cliente {
+
+	  ArrayList<String> agenda = new ArrayList();
+	  
+	protected String nome;
+	
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String teste (String dd) {
+		agenda.add(dd);
+	 return dd;
+	}
+}

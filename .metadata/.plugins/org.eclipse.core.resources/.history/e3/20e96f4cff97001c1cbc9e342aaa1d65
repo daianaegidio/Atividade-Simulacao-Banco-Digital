@@ -1,0 +1,32 @@
+import java.util.List;
+
+public class Banco {
+
+	private String nome;
+	private List<Conta> contas;
+	//
+	protected Cliente cliente;
+	
+	public Banco(Cliente cliente) {
+		
+		this.cliente= cliente;
+	}
+	public void teste() {System.out.println(cliente);}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Conta> getContas() {
+		return contas;
+	}
+
+	public void setContas(List<Conta> contas) {
+		this.contas = contas;
+	}
+
+}

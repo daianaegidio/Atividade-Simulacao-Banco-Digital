@@ -1,0 +1,91 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Cliente> meusClientes= new ArrayList<>();
+		Scanner leitor = new Scanner(System.in);
+		
+		Cliente clientes= new Cliente();
+	
+		
+		long cpf;
+		String nome;
+		int idade;
+		boolean validacao=false;
+		
+		do {
+			System.out.println("Digite uma opção:");
+			System.out.println("1- Cadastrar clientes");
+			System.out.println("2- Consultar clientes cadastrados");
+			System.out.println("3- Cadastrar Contas Bancárias");
+			System.out.println("4- Consultar contas Bancárias cadastradas");
+			System.out.println("5-  Fazer Transferência");
+			System.out.println("6- Sair");
+			int resposta= leitor.nextInt();
+			
+		switch (resposta) {	
+		case 1:
+		System.out.println("---Cadastrar Clientes---");
+		System.out.println("Digite o CPF:");
+		cpf= leitor.nextLong();
+		
+		System.out.println("Digite o Nome:");
+		nome= leitor.next();
+		
+		System.out.println("Digite sua idade:");
+		idade= leitor.nextInt();
+		
+		clientes.setCpf(cpf);
+		clientes.setNome(nome);
+		clientes.setIdade(idade);
+		meusClientes.add(clientes);
+		 System.out.println(" Cliente Cadastrado Com Sucesso!");
+		
+		break;
+		
+		case 2:
+			
+			if(meusClientes.isEmpty()){
+				
+				System.out.println("Não tem Clientes Cadastrados!");
+			}else {
+		System.out.println("---Clientes Cadastrados---");
+
+
+		for (int i=0; i < meusClientes.size(); i++) {
+			System.out.println("CPF:" + meusClientes.get(i).getCpf());
+			System.out.println("Nome:" + meusClientes.get(i).getNome());
+			System.out.println("Idade:" + meusClientes.get(i).getCpf());
+			System.out.println("-------------------------------------");
+			
+		}}
+		break;
+		
+		case 3:
+			
+			System.out.println("Digite o Cpf do cliente que deseja criar conta:");
+			long resp1=leitor.nextLong();
+			
+			for (int i=0; i < meusClientes.size(); i++) {
+				
+				if(meusClientes.get(i).getCpf()==resp1) {}
+			}
+			break;
+		case 6:
+			
+			System.out.println("Sistema Finalizado!");
+			validacao=true;
+			break;
+		}
+		
+		}while(!validacao);
+		
+		
+	
+	}
+
+}

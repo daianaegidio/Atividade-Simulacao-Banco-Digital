@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Cliente> meusClientes= new ArrayList<>();
+		Scanner leitor = new Scanner(System.in);
+		
+		Cliente clientes= new Cliente();
+		
+		clientes.setCpf(1111);
+		clientes.setNome("Daiana");
+		clientes.setIdade(18);
+		meusClientes.add(clientes);
+		
+		
+		long cpf;
+		String nome;
+		int idade;
+		boolean validacao=false;
+		
+		do {
+		System.out.println("Digite o CPF:");
+		cpf= leitor.nextLong();
+		
+		System.out.println("Digite o Nome:");
+		nome= leitor.next();
+		
+		System.out.println("Digite sua idade:");
+		idade= leitor.nextInt();
+		
+		clientes.setCpf(cpf);
+		clientes.setNome(nome);
+		clientes.setIdade(idade);
+		
+		}while(!validacao);
+		
+		
+	
+	}
+
+}
